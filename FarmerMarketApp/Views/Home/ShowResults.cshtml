@@ -1,0 +1,29 @@
+﻿@model List<FarmerMarketApp.ViewModels.ResultViewModel>
+
+@{
+    ViewBag.Title = "ShowResults";
+}
+
+<h2>Markets within @ViewBag.Distance Meters</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Distance (meters)</td>
+            <td>Name</td>
+            <td>Website</td>
+            <td>Schedule</td>
+            <td>Lat</td>
+            <td>Long</td>
+        </tr>
+    </thead>
+    @foreach (var result in Model) { 
+        <tr>
+            <td>@result.Distance.ToString("F0")</td>
+            <td>@result.Name</td>
+            <td><a href="@result.Website">@result.Website</a></td>
+            <td>@result.Schedule</td>
+            <td>@result.Y</td>
+            <td>@result.X</td>
+        </tr>
+    }
+</table>

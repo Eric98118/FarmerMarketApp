@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MarketsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="MarketsModelStoreContainer">
+          <EntitySet Name="FarmerMarkets" EntityType="MarketsModel.Store.FarmerMarkets" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="FarmerMarkets">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="FMID" Type="float" Nullable="false" />
+          <Property Name="MarketName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Website" Type="nvarchar" MaxLength="255" />
+          <Property Name="Street" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="County" Type="nvarchar" MaxLength="255" />
+          <Property Name="State" Type="nvarchar" MaxLength="255" />
+          <Property Name="Zip" Type="float" />
+          <Property Name="Schedule" Type="nvarchar" MaxLength="255" />
+          <Property Name="x" Type="float" />
+          <Property Name="y" Type="float" />
+          <Property Name="Location" Type="nvarchar" MaxLength="255" />
+          <Property Name="Credit" Type="nvarchar" MaxLength="255" />
+          <Property Name="WIC" Type="nvarchar" MaxLength="255" />
+          <Property Name="WICcash" Type="nvarchar" MaxLength="255" />
+          <Property Name="SFMNP" Type="nvarchar" MaxLength="255" />
+          <Property Name="SNAP" Type="nvarchar" MaxLength="255" />
+          <Property Name="Bakedgoods" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cheese" Type="nvarchar" MaxLength="255" />
+          <Property Name="Crafts" Type="nvarchar" MaxLength="255" />
+          <Property Name="Flowers" Type="nvarchar" MaxLength="255" />
+          <Property Name="Eggs" Type="nvarchar" MaxLength="255" />
+          <Property Name="Seafood" Type="nvarchar" MaxLength="255" />
+          <Property Name="Herbs" Type="nvarchar" MaxLength="255" />
+          <Property Name="Vegetables" Type="nvarchar" MaxLength="255" />
+          <Property Name="Honey" Type="nvarchar" MaxLength="255" />
+          <Property Name="Jams" Type="nvarchar" MaxLength="255" />
+          <Property Name="Maple" Type="nvarchar" MaxLength="255" />
+          <Property Name="Meat" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nursery" Type="nvarchar" MaxLength="255" />
+          <Property Name="Nuts" Type="nvarchar" MaxLength="255" />
+          <Property Name="Plants" Type="nvarchar" MaxLength="255" />
+          <Property Name="Poultry" Type="nvarchar" MaxLength="255" />
+          <Property Name="Prepared" Type="nvarchar" MaxLength="255" />
+          <Property Name="Soap" Type="nvarchar" MaxLength="255" />
+          <Property Name="Trees" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wine" Type="nvarchar" MaxLength="255" />
+          <Property Name="updateTime" Type="datetime" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GeoLocation" Type="geography" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MarketsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MarketsEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="FarmerMarkets" EntityType="MarketsModel.FarmerMarket" />
+        </EntityContainer>
+        <EntityType Name="FarmerMarket">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="FMID" Type="Double" Nullable="false" />
+          <Property Name="MarketName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Street" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="County" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Zip" Type="Double" />
+          <Property Name="Schedule" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="x" Type="Double" />
+          <Property Name="y" Type="Double" />
+          <Property Name="Location" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Credit" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="WIC" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="WICcash" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SFMNP" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SNAP" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Bakedgoods" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Cheese" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Crafts" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Flowers" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Eggs" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Seafood" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Herbs" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Vegetables" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Honey" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Jams" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Maple" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Meat" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Nursery" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Nuts" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Plants" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Poultry" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Prepared" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Soap" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Trees" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Wine" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="updateTime" Type="DateTime" Precision="3" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Type="Geography" Name="GeoLocation" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MarketsModelStoreContainer" CdmEntityContainer="MarketsEntities">
+          <EntitySetMapping Name="FarmerMarkets">
+            <EntityTypeMapping TypeName="MarketsModel.FarmerMarket">
+              <MappingFragment StoreEntitySet="FarmerMarkets">
+                <ScalarProperty Name="GeoLocation" ColumnName="GeoLocation" />
+                <ScalarProperty Name="FMID" ColumnName="FMID" />
+                <ScalarProperty Name="MarketName" ColumnName="MarketName" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Schedule" ColumnName="Schedule" />
+                <ScalarProperty Name="x" ColumnName="x" />
+                <ScalarProperty Name="y" ColumnName="y" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="WIC" ColumnName="WIC" />
+                <ScalarProperty Name="WICcash" ColumnName="WICcash" />
+                <ScalarProperty Name="SFMNP" ColumnName="SFMNP" />
+                <ScalarProperty Name="SNAP" ColumnName="SNAP" />
+                <ScalarProperty Name="Bakedgoods" ColumnName="Bakedgoods" />
+                <ScalarProperty Name="Cheese" ColumnName="Cheese" />
+                <ScalarProperty Name="Crafts" ColumnName="Crafts" />
+                <ScalarProperty Name="Flowers" ColumnName="Flowers" />
+                <ScalarProperty Name="Eggs" ColumnName="Eggs" />
+                <ScalarProperty Name="Seafood" ColumnName="Seafood" />
+                <ScalarProperty Name="Herbs" ColumnName="Herbs" />
+                <ScalarProperty Name="Vegetables" ColumnName="Vegetables" />
+                <ScalarProperty Name="Honey" ColumnName="Honey" />
+                <ScalarProperty Name="Jams" ColumnName="Jams" />
+                <ScalarProperty Name="Maple" ColumnName="Maple" />
+                <ScalarProperty Name="Meat" ColumnName="Meat" />
+                <ScalarProperty Name="Nursery" ColumnName="Nursery" />
+                <ScalarProperty Name="Nuts" ColumnName="Nuts" />
+                <ScalarProperty Name="Plants" ColumnName="Plants" />
+                <ScalarProperty Name="Poultry" ColumnName="Poultry" />
+                <ScalarProperty Name="Prepared" ColumnName="Prepared" />
+                <ScalarProperty Name="Soap" ColumnName="Soap" />
+                <ScalarProperty Name="Trees" ColumnName="Trees" />
+                <ScalarProperty Name="Wine" ColumnName="Wine" />
+                <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

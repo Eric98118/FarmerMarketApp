@@ -1,0 +1,33 @@
+﻿@model FarmerMarketApp.ViewModels.ResultViewModel
+
+@{
+    ViewBag.Title = "ShowSingleResult";
+}
+
+<h2>Closest Farmer's Market to Your Location:</h2>
+<table>
+    <tr>
+        <td>@Html.LabelFor(model => model.Distance) (Meters)</td>
+        <td>@Model.Distance.ToString("F0")</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Name)</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Website)</td>
+        <td><a href="@Model.Website">@Model.Website</a></td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Schedule)</td>
+        <td>@Model.Schedule</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.X)</td>
+        <td>@Model.X</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(model => model.Y)</td>
+        <td>@Model.Y</td>
+    </tr>
+</table>

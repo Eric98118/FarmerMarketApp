@@ -1,0 +1,58 @@
+﻿@model FarmerMarketApp.Models.SearchInput
+
+@{
+    ViewBag.Title = "Search";
+}
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/modernizr-2.6.2.js"></script>
+<script type="text/javascript">
+    $(function () {
+        if (!Modernizr.geolocation) {
+            alert("This browser doesn't support the Geolocation API.");
+        } else {
+            // alert("This browser does support the Geolocation API.");
+            navigator.geolocation.getCurrentPosition(GotLocation, FailedLocation);
+        }
+    });
+
+    function GotLocation(position) {
+        var curLatitude = position.coords.latitude;
+        var curLongitude = position.coords.longitude;
+        // alert("Lat: " + curLatitude + " Long: " + curLongitude);
+        $('#longitudeTextBox').val(curLongitude);
+        $('#latitudeTextBox').val(curLatitude);
+    }
+
+    function FailedLocation() {
+        alert("Failed to get the location.");
+    }
+</script>
+
+<h2>Search</h2>
+
+@using (Html.BeginForm()) { 
+    <fieldset>
+        <legend>Find a Farmer's Market Near You!</legend>
+        <table>
+            <tr>
+                <td>@Html.LabelFor(model => model.x)</td>
+                <td>@Html.TextBoxFor(model => model.x, new { @id = "longitudeTextBox" })</td>
+                <td>@Html.ValidationMessageFor(model => model.x)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.y)</td>
+                <td>@Html.TextBoxFor(model => model.y, new { @id = "latitudeTextBox" })</td>
+                <td>@Html.ValidationMessageFor(model => model.y)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(model => model.distance)</td>
+                <td>@Html.TextBoxFor(model => model.distance)</td>
+                <td>@Html.ValidationMessageFor(model => model.distance)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="Submit" /></td>
+            </tr>
+        </table>
+    </fieldset>
+}
+<h3 class="LongTest"></h3>
